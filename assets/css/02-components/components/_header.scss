@@ -1,0 +1,40 @@
+header {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  // position: sticky;
+  // top: 0;
+  z-index: 20;
+  background-color: transparent;
+  box-shadow: 0px 0 0 0px rgba(46,39,46,0);
+  transition: all 200ms ease-in-out;
+  .logo-container {
+    img {
+      width: 160px;
+    }
+  }
+
+  .header-title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.spin {
+      margin-top: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    img {
+      max-width: 400px;
+    }
+  }
+
+  &.sticky {
+    // background-color: #757575;
+    // box-shadow: 0px 8px 20px 0px rgba(46,39,46,0.5);
+    // transition: all 200ms ease-in-out;
+  }
+}

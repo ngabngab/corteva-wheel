@@ -1,0 +1,10 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  &.body-bg {
+    background-image: url('../img/background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Scratch & Fortune</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/select2.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="body-bg">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="logo-container">
+            <img src="./assets/img/logo.svg" alt="">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="header-title">
+            <img src="./assets/img/scratch-title.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main-tag">
+    <div class="container">
+      <!--  -->
+      <div class="row main-input">
+        <div class="col-12 ">
+          <div class="line-separator"></div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="VoucherCode">No. Voucher <span class="text-danger">*</span></label>
+            <input class="form-control input-validation-error" type="text" data-val="true"
+              data-val-required="No Voucher harus diisi" id="VoucherCode" name="VoucherCode" value=""
+              aria-describedby="VoucherCode-error" aria-invalid="true">
+            <span class="text-danger field-validation-error" data-valmsg-for="VoucherCode"
+              data-valmsg-replace="true"><span id="VoucherCode-error" class="">No Voucher harus diisi</span></span>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="FullName">Nama <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" data-val="true" data-val-required="Nama harus diisi" id="FullName"
+              name="FullName" value="">
+            <span class="text-danger field-validation-valid" data-valmsg-for="FullName"
+              data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="IdentityCardNumber">No. KTP <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" data-val="true" data-val-required="No KTP harus diisi"
+              id="IdentityCardNumber" name="IdentityCardNumber" value="">
+            <span class="text-danger field-validation-valid" data-valmsg-for="IdentityCardNumber"
+              data-valmsg-replace="true"></span>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="PhoneNumber">No. HP <span class="text-danger">*</span></label>
+            <input class="form-control" type="text" data-val="true" data-val-required="No HP harus diisi"
+              id="PhoneNumber" name="PhoneNumber" value="">
+            <span class="text-danger field-validation-valid" data-valmsg-for="PhoneNumber"
+              data-valmsg-replace="true"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="Province">Propinsi</label>
+            <select name="Province" id="Province" class="form-control">
+              <option value="P-JB">Jawa Barat</option>
+              <option value="P-LPG">Lampung</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="City">Kota</label>
+            <select name="City" id="City" class="form-control">
+              <option value="C-BDG">Bandung</option>
+              <option value="C-BGR">Bogor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="Store">Toko</label>
+            <select name="Store" id="Store" class="form-control">
+              <option value="T-MJ">Toko Maju Jaya</option>
+              <option value="T-MT">Toko Maju Terus</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="row product-input">
+        <div class="col-12">
+          <div class="line-separator"></div>
+        </div>
+        <div class="col-12">
+          <div id="ProductBlock">
+            <div class="form-group product-container">
+              <div class="mb-2 mr-2 product-input-container">
+                <label class="control-label">Produk</label>
+                <select class="form-control productName">
+                  <option value="1">Product 1</option>
+                  <option value="2">Product 2</option>
+                  <option value="3">Product 3</option>
+                  <option value="4">Product 4</option>
+                </select>
+              </div>
+              <div class="mb-2 mr-2 product-qty-container">
+                <label class="control-label">Jumlah (Liter/KG)</label>
+                <input type="number" min="0" class="form-control quantity">
+              </div>
+              <div class="mb-2 product-cta-delete">
+                <label class="control-label">&nbsp;</label>
+                <button type="button" onclick="removeElement(this)" class="btn btn-danger"></button></div>
+            </div>
+          </div>
+
+          <div id="AddProductBlock">
+            <button id="BtnAddProduct" type="button" class="btn btn-success">Tambah Produk</button>
+          </div>
+
+        </div>
+      </div>
+      <!-- GDPR -->
+      <div class="row gdpr-container">
+        <div class="col-12">
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1" name="example1">
+              <label class="custom-control-label" for="customCheck1"> Saya setuju dengan <a href="#" data-toggle="modal"
+                  data-target="#ModalPrivacy">Kebijakan dan Privasi</a></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+              <label class="custom-control-label" for="customCheck2"> Saya ingin menerima informasi produk dan/atau
+                promosi melalui email/fax/sms/mms/telpon/pos</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- GDPR: END-->
+      <div class="row note-mandatory-container">
+        <div class="col-12">
+          <label class="note-mandatory">* Data wajib diisi</label>
+        </div>
+      </div>
+      <div class="footer-btn-submit">
+        <input type="button" id="BtnSubmit" value="Cek Keberuntungamu!" class="btn btn-primary btn-submit valid"
+          aria-invalid="false">
+      </div>
+    </div>
+  </main>
+  <div class="modal" id="ModalPrivacy">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3 class="modal-title">Kebijakan dan Privasi</h3>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Corteva menganggap penting privasi Anda. Informasi pribadi Anda (nama, e-mail, nomor telepon, dan data kontak lainnya) akan disimpan di sistem pelanggan pilihan yang terutama di-host di Amerika Serikat. Informasi ini akan digunakan oleh Corteva, afiliasi, mitra, dan pihak ketiga tertentu di negara lain untuk memberi Anda informasi produk atau layanan yang diminta. Untuk selengkapnya, kunjungi www.privacy.corteva.com. Dengan memberikan informasi pribadi, berarti Anda menyetujui persyaratan dan ketentuan Pernyataan Privasi ini.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

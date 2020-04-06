@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Scratch & Fortune</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/select2.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="body-bg">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="logo-container">
+            <img src="./assets/img/logo.svg" alt="">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="header-title spin">
+            <img src="./assets/img/scratch-title.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main-spinner">
+    <div class="container">
+      <!--  -->
+      <div class="row">
+        <div class="col-12 ">
+          <div id="spinnerContainer" class="spinner-container">
+            <canvas id="spinner" width="320px" height="320px">
+              Your browser doesn't support canvas
+            </canvas>
+          </div>
+          <div class="btn-spinner-container">
+            <button id="BtnCheckReward" class="btn btn-primary btn-lg">Putar</button>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+
+    </div>
+  </main>
+  <div class="modal" id="ModalPrivacy">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h3 class="modal-title">Kebijakan dan Privasi</h3>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Corteva menganggap penting privasi Anda. Informasi pribadi Anda (nama, e-mail, nomor telepon, dan data kontak lainnya) akan disimpan di sistem pelanggan pilihan yang terutama di-host di Amerika Serikat. Informasi ini akan digunakan oleh Corteva, afiliasi, mitra, dan pihak ketiga tertentu di negara lain untuk memberi Anda informasi produk atau layanan yang diminta. Untuk selengkapnya, kunjungi www.privacy.corteva.com. Dengan memberikan informasi pribadi, berarti Anda menyetujui persyaratan dan ketentuan Pernyataan Privasi ini.
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/select2.min.js"></script>
+  <script src="assets/js/Winwheel.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
