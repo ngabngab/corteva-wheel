@@ -34,61 +34,61 @@ $(function () {
       $.each(listOfRewards, function (index, value) {
         segments.push({ fillStyle: value.color, text: value.name, strokeStyle: 'transparent' });
       });
-      theWheel = new Winwheel({
-        canvasId: "spinner",
-        innerRadius: 0,
-        numSegments: 8,
-        outerRadius: 140,
-        segments: segments,
-        textFillStyle: "white",
-        textFontSize: 18,
-        textDirection: "reversed",
-        drawText: true,
-        animation:
-        {
-          type: 'spinToStop',
-          duration: 5,
-          spins: 8,
-          callbackAfter: 'drawTriangle()',
-          callbackFinished: 'alertPrize()'
-        }
-      });
-
-      //   theWheel = new Winwheel({
-      //     canvasId: "spinner",
-      //     'innerRadius':0,
-      //     'numSegments'       : 8,                // Specify number of segments.
-      //     'outerRadius'       : 140,              // Set outer radius so wheel fits inside the background.
-      //     'drawText'          : true,             // Code drawn text can be used with segment images.
-      //     'textFontSize'      : 16,               // Set text options as desired.
-      //     'textOrientation'   : 'curved',
-      //     'textAlignment'     : 'inner',
-      //     'textMargin'        : 90,
-      //     'textFontFamily'    : 'arial',
-      //     'textLineWidth'     : 0,
-      //     'textFillStyle'     : 'white',
-      //     'drawMode'          : 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
-      //     'segments'          :                    // Define segments including image and text.
-      //     [
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Jane', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Tom', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Mary', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Alex', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Sarah', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Bruce', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Rose', strokeStyle: 'transparent'},
-      //        {'image' : 'umroh.png', "fillStyle":"#23c6c8", 'text' : 'Steve', strokeStyle: 'transparent'}
-      //     ],
-      //     'animation' :           // Specify the animation to use.
-      //     {
-      //         'type'     : 'spinToStop',
-      //         'duration' : 5,
-      //         'spins'    : 8,
-      //     }
+      // theWheel = new Winwheel({
+      //   canvasId: "spinner",
+      //   innerRadius: 0,
+      //   numSegments: 8,
+      //   outerRadius: 140,
+      //   segments: segments,
+      //   textFillStyle: "white",
+      //   textFontSize: 18,
+      //   textDirection: "reversed",
+      //   drawText: true,
+      //   animation:
+      //   {
+      //     type: 'spinToStop',
+      //     duration: 5,
+      //     spins: 8,
+      //     callbackAfter: 'drawTriangle()',
+      //     callbackFinished: 'alertPrize()'
+      //   }
       // });
 
+        theWheel = new Winwheel({
+          canvasId: "spinner",
+          'innerRadius':0,
+          'numSegments'       : 8,                // Specify number of segments.
+          'outerRadius'       : 140,              // Set outer radius so wheel fits inside the background.
+          'drawText'          : true,             // Code drawn text can be used with segment images.
+          'textFontSize'      : 12,               // Set text options as desired.
+          'textOrientation'   : 'curved',
+          'textAlignment'     : 'outer',
+          'textMargin'        : 8,
+          'textFontFamily'    : 'arial',
+          'textLineWidth'     : 0,
+          'textFillStyle'     : 'black',
+          'drawMode'          : 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
+          'segments'          :                    // Define segments including image and text.
+          [
+             {'image' : 'test-image-8-segment-01.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-02.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-03.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-04.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-05.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-06.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-07.svg', 'text' : 'Gold'},
+             {'image' : 'test-image-8-segment-08.svg', 'text' : 'Gold'}
+          ],
+          'animation' :           // Specify the animation to use.
+          {
+              'type'     : 'spinToStop',
+              'duration' : 5,
+              'spins'    : 8
+          }
+      });
+
       // Usual pointer drawing code.
-      drawTriangle();
+      // drawTriangle();
 
 
     },
