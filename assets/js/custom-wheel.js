@@ -54,37 +54,72 @@ $(function () {
       //   }
       // });
 
-        theWheel = new Winwheel({
-          canvasId: "spinner",
-          'innerRadius':0,
-          'numSegments'       : 8,                // Specify number of segments.
-          'outerRadius'       : 140,              // Set outer radius so wheel fits inside the background.
-          'drawText'          : true,             // Code drawn text can be used with segment images.
-          'textFontSize'      : 12,               // Set text options as desired.
-          'textOrientation'   : 'curved',
-          'textAlignment'     : 'outer',
-          'textMargin'        : 8,
-          'textFontFamily'    : 'arial',
-          'textLineWidth'     : 0,
-          'textFillStyle'     : 'black',
-          'drawMode'          : 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
-          'segments'          :                    // Define segments including image and text.
-          [
-             {'image' : 'test-image-8-segment-01.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-02.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-03.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-04.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-05.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-06.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-07.svg', 'text' : 'Gold'},
-             {'image' : 'test-image-8-segment-08.svg', 'text' : 'Gold'}
-          ],
-          'animation' :           // Specify the animation to use.
-          {
-              'type'     : 'spinToStop',
-              'duration' : 5,
-              'spins'    : 8
-          }
+
+      let numSegment = [2, 3, 4, 5, 6, 7]
+      let imagesFiles = {
+        "twoSegment": [
+          { 'image': 'test-image-2-segment-01.svg', 'text': 'Gold' },
+          { 'image': 'test-image-2-segment-02.svg', 'text': 'Gold' }
+        ],
+        "threeSegment": [
+          { 'image': 'test-image-3-segment-01.svg', 'text': 'Gold' },
+          { 'image': 'test-image-3-segment-02.svg', 'text': 'Gold' },
+          { 'image': 'test-image-3-segment-03.svg', 'text': 'Gold' }
+        ],
+        "fourSegment": [
+          { 'image': 'test-image-4-segment-01.svg', 'text': 'Gold' },
+          { 'image': 'test-image-4-segment-02.svg', 'text': 'Gold' },
+          { 'image': 'test-image-4-segment-03.svg', 'text': 'Gold' },
+          { 'image': 'test-image-4-segment-04.svg', 'text': 'Gold' }
+        ],
+        "fiveSegment": [
+          { 'image': 'test-image-5-segment-01.svg', 'text': 'Gold' },
+          { 'image': 'test-image-5-segment-02.svg', 'text': 'Gold' },
+          { 'image': 'test-image-5-segment-03.svg', 'text': 'Gold' },
+          { 'image': 'test-image-5-segment-04.svg', 'text': 'Gold' },
+          { 'image': 'test-image-5-segment-05.svg', 'text': 'Gold' }
+        ],
+        "sixSegment": [
+          { 'image': 'test-image-6-segment-01.svg', 'text': 'Gold' },
+          { 'image': 'test-image-6-segment-02.svg', 'text': 'Gold' },
+          { 'image': 'test-image-6-segment-03.svg', 'text': 'Gold' },
+          { 'image': 'test-image-6-segment-04.svg', 'text': 'Gold' },
+          { 'image': 'test-image-6-segment-05.svg', 'text': 'Gold' },
+          { 'image': 'test-image-6-segment-06.svg', 'text': 'Gold' }
+        ],
+        "sevenSegment": [
+          { 'image': 'test-image-7-segment-01.svg', 'text': 'Gold' },
+          { 'image': 'test-image-7-segment-02.svg', 'text': 'Gold' },
+          { 'image': 'test-image-7-segment-03.svg', 'text': 'Gold' },
+          { 'image': 'test-image-7-segment-04.svg', 'text': 'Gold' },
+          { 'image': 'test-image-7-segment-05.svg', 'text': 'Gold' },
+          { 'image': 'test-image-7-segment-06.svg', 'text': 'Gold' },
+          { 'image': 'test-image-7-segment-07.svg', 'text': 'Gold' }
+        ]
+      }
+
+      theWheel = new Winwheel({
+        canvasId: "spinner",
+        'innerRadius': 0,
+        'numSegments': numSegment[5],                // Specify number of segments.
+        'outerRadius': 140,              // Set outer radius so wheel fits inside the background.
+        'drawText': true,             // Code drawn text can be used with segment images.
+        'textFontSize': 12,               // Set text options as desired.
+        'textOrientation': 'curved',
+        'textAlignment': 'outer',
+        'textMargin': 8,
+        'textFontFamily': 'arial',
+        'textLineWidth': 0,
+        'textFillStyle': 'white',
+        'textStrokeStyle': "black",
+        'drawMode': 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
+        'segments': imagesFiles.sevenSegment,
+        'animation':           // Specify the animation to use.
+        {
+          'type': 'spinToStop',
+          'duration': 5,
+          'spins': 8
+        }
       });
 
       // Usual pointer drawing code.
