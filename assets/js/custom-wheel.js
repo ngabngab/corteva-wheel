@@ -59,25 +59,25 @@ $(function () {
       let imagesFiles = {
         "twoSegment": [
           { 'image': 'test-image-2-segment-01.svg', 'text': 'Gold' },
-          { 'image': 'test-image-2-segment-02.svg', 'text': 'Gold' }
+          { 'image': 'test-image-2-segment-02-zonk.svg', 'text': 'Zonk' }
         ],
         "threeSegment": [
           { 'image': 'test-image-3-segment-01.svg', 'text': 'Gold' },
           { 'image': 'test-image-3-segment-02.svg', 'text': 'Gold' },
-          { 'image': 'test-image-3-segment-03.svg', 'text': 'Gold' }
+          { 'image': 'test-image-3-segment-03-zonk.svg', 'text': 'Zonk' }
         ],
         "fourSegment": [
           { 'image': 'test-image-4-segment-01.svg', 'text': 'Gold' },
           { 'image': 'test-image-4-segment-02.svg', 'text': 'Gold' },
           { 'image': 'test-image-4-segment-03.svg', 'text': 'Gold' },
-          { 'image': 'test-image-4-segment-04.svg', 'text': 'Gold' }
+          { 'image': 'test-image-4-segment-04-zonk.svg', 'text': 'Zonk' }
         ],
         "fiveSegment": [
           { 'image': 'test-image-5-segment-01.svg', 'text': 'Gold' },
           { 'image': 'test-image-5-segment-02.svg', 'text': 'Gold' },
           { 'image': 'test-image-5-segment-03.svg', 'text': 'Gold' },
           { 'image': 'test-image-5-segment-04.svg', 'text': 'Gold' },
-          { 'image': 'test-image-5-segment-05.svg', 'text': 'Gold' }
+          { 'image': 'test-image-5-segment-05-zonk.svg', 'text': 'Zonk' }
         ],
         "sixSegment": [
           { 'image': 'test-image-6-segment-01.svg', 'text': 'Gold' },
@@ -85,7 +85,7 @@ $(function () {
           { 'image': 'test-image-6-segment-03.svg', 'text': 'Gold' },
           { 'image': 'test-image-6-segment-04.svg', 'text': 'Gold' },
           { 'image': 'test-image-6-segment-05.svg', 'text': 'Gold' },
-          { 'image': 'test-image-6-segment-06.svg', 'text': 'Gold' }
+          { 'image': 'test-image-6-segment-06-zonk.svg', 'text': 'Zonk' }
         ],
         "sevenSegment": [
           { 'image': 'test-image-7-segment-01.svg', 'text': 'Gold' },
@@ -94,14 +94,14 @@ $(function () {
           { 'image': 'test-image-7-segment-04.svg', 'text': 'Gold' },
           { 'image': 'test-image-7-segment-05.svg', 'text': 'Gold' },
           { 'image': 'test-image-7-segment-06.svg', 'text': 'Gold' },
-          { 'image': 'test-image-7-segment-07.svg', 'text': 'Gold' }
+          { 'image': 'test-image-7-segment-07-zonk.svg', 'text': 'Zonk' }
         ]
       }
 
       theWheel = new Winwheel({
         canvasId: "spinner",
         'innerRadius': 0,
-        'numSegments': numSegment[5],                // Specify number of segments.
+        'numSegments': numSegment[0],                // Specify number of segments.
         'outerRadius': 140,              // Set outer radius so wheel fits inside the background.
         'drawText': true,             // Code drawn text can be used with segment images.
         'textFontSize': 12,               // Set text options as desired.
@@ -113,7 +113,7 @@ $(function () {
         'textFillStyle': 'white',
         'textStrokeStyle': "black",
         'drawMode': 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
-        'segments': imagesFiles.sevenSegment,
+        'segments': imagesFiles.twoSegment,
         'animation':           // Specify the animation to use.
         {
           'type': 'spinToStop',
